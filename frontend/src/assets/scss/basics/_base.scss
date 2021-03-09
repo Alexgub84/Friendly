@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $clr1;
+}
+input{
+    background-color: $clr6;
+}
+
+.pets-container{
+    min-height: 75vh;
+}

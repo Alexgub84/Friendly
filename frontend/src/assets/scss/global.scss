@@ -1,0 +1,35 @@
+// setup
+@import "./setup/_typography.scss";
+@import "./setup/variables.scss";
+@import "./setup//mixins.scss";
+// // basics
+// @import "./basics/base.scss";
+@import "./basics/base.scss";
+@import "./basics/layout.scss";
+@import "./basics/helpers.scss";
+@import "./basics/buttons.scss";
+@import "./basics/form.scss";
+// @import "./basics/helpers.scss";
+
+// // cmps
+@import "./components/petPreview.scss";
+@import "./components/categoryList.scss";
+@import "./components/hero.scss";
+@import "./components/petDetails.scss";
+@import "./components/loginModal.scss";
+@import "./components/about.scss";
+@import "./components/footer.scss";
+@import "./components/petList.scss";
+@import "./components/order.scss";
+@import "./components/petFilter.scss";
+@import "./components/tagsFilter.scss";
+@import "./components/chat.scss";
+@import "./components/navBar.scss";
+@import "./components/userDataModal.scss";
+@import "./components/orderListModal.scss";
+@import "./components/chatsList.scss";
+@import "./components/adoptionMsgModal.scss";
+//Views
+@import "./views/shopDetails.scss";
+@import "./views/signup.scss";
+@import "./views/userProfile.scss";

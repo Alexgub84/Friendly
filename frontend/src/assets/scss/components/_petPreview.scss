@@ -1,0 +1,290 @@
+.pet-preview {
+    background-color: $clr2;
+    margin: 20px;
+    height: 20rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+
+
+
+    img {
+        height: 13rem;
+        width: 15rem;
+        position: Absolute;
+        top: 0px;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        object-fit: cover;
+
+    }
+
+    .card-description {
+        background-color: $clr2;
+        height: 9rem;
+        width: 15rem;
+        position: absolute;
+        bottom: 0em;
+        padding: 0.5em 0.7em;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-bottom: 1px solid rgb(198, 194, 252);
+
+        .card-description-header {
+            .pet-name {
+                font-family: montserrat, sans-serif;
+                font-size: 1.1rem;
+                margin: 5px;
+                text-align: start;
+            }
+
+            .pet-gender-male-icon {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 7px;
+                top: 11px;
+                color: rgb(79, 127, 216)
+            }
+
+            .pet-gender-female-icon {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 7px;
+                top: 11px;
+                color: rgb(210, 136, 219)
+            }
+        }
+
+
+
+        h4 {
+            font-family: roboto, sans-serif;
+            font-size: 0.8rem;
+            margin: 10px 5px;
+            text-align: start;
+            color: rgb(44, 43, 43);
+        }
+
+
+    }
+
+
+    .shop-container {
+        position: absolute;
+        width: 15rem;
+        bottom: 0;
+        font-family: roboto, sans-serif;
+        font-size: 0.8rem;
+        margin: 0 5px;
+        text-align: start;
+        color: rgb(44, 43, 43);
+        padding: 0.5em 1em;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            color: rgb(87, 87, 87);
+        }
+
+        .pet-rate-box {
+            display: flex;
+            padding: 5px;
+            justify-content: space-between;
+
+            // .love-icon {
+            //     color: #ffbf00;
+            //     font-size: 1.2rem;
+            //     margin-right: 5px;
+            //     cursor: pointer;
+
+
+            // }
+
+            .love-count {
+                font-size: 1rem;
+                color: #979595;
+                font-family: roboto, sans-serif;
+                transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            }
+
+            .love-icon {
+                position: absolute;
+                background: url("../../img/love.png") no-repeat;
+                background-position: left;
+                background-size: 2900%;
+                height: 70px;
+                width: 70px;
+                top: 50%;
+                right: -19px;
+                transform: translate(-50%, -50%);
+            }
+
+            .love-icon-active {
+                position: absolute;
+                background: url("../../img/love.png") no-repeat;
+                background-size: 2900%;
+                height: 70px;
+                width: 70px;
+                top: 50%;
+                right: -15px;
+                transform: translate(-50%, -50%);
+                animation: animate .8s steps(28) 1;
+                background-position: right;
+            }
+
+            @keyframes animate {
+                0% {
+                    background-position: left;
+                }
+
+                100% {
+                    background-position: right;
+                }
+            }
+
+        }
+
+        .shop-rate-box {
+
+            display: flex;
+            justify-content: space-around;
+
+            .shop-rate-rating {
+
+                color: #ffbf00;
+                font-size: 14px;
+                padding: 3px;
+                font-family: montserrat, sans-serif;
+                border-radius: 50%;
+                font-weight: 900;
+
+            }
+
+            .star-icon {
+                color: #ffbf00;
+                margin: 19px 0 0;
+            }
+
+            .shop-rate-count {
+                font-size: 13px;
+                margin: 18px 3px 0 0;
+                color: rgb(192, 192, 192);
+            }
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: rgb(57, 57, 57);
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: rgb(107, 106, 106);
+            transform: scale(1.1)
+        }
+
+    }
+
+
+}
+
+.pet-preview:hover .card-description {
+    height: 8rem;
+
+    h4 {
+        color: #1dbf73
+    }
+}
+
+.pet-preview:hover img {
+    height: 14rem;
+}
+
+.ribbon {
+    width: 100px;
+    height: 100px;
+    overflow: hidden; 
+    position: absolute;
+    z-index: 4;
+}
+
+.ribbon::before,
+.ribbon::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 3px solid #1092d3;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 165px;
+    padding: 5px 0;
+    background-color: #1092d3;
+    // box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    text-align: center;
+    font-family: montserrat, sans-serif;
+    font-weight: 800;
+    color: rgb(215, 230, 215);
+}
+
+.ribbon-top-right {
+    top: -3px;
+    right: -3px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+    top: 0;
+    left: 0;
+}
+
+.ribbon-top-right::after {
+    bottom: 0;
+    right: 0;
+}
+
+.ribbon-top-right span {
+    left: -22px;
+    top: 30px;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 375px) {
+    .pet-preview {
+        margin: 10px;
+        width: 19rem;
+
+        img {
+            width: 19rem;
+        }
+
+        .card-description {
+            width: 19rem;
+        }
+        
+        .shop-container {
+            width: 19rem;
+        }
+    }
+}

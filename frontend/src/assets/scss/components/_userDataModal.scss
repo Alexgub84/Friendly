@@ -1,0 +1,115 @@
+.user-data {
+    align-content: center;
+    background-color: $clr2;
+    padding: 20px;
+    width: 600px;
+    font-family: roboto, sans-serif;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 200px;
+    margin-top: 20px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+
+
+    &.inModal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+
+    .header {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+
+        img {
+            width: 220px;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+
+    .user-profile-details {
+        margin-bottom: 150px;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+
+        h2 {
+            text-align: left;
+        }
+    }
+
+    p {
+        color: rgb(155, 155, 155);
+    }
+
+    span {
+        color: rgb(48, 47, 47);
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .close-user-modal-btn {
+        width: 80px;
+        font-size: 1rem;
+        padding: 15px;
+        border-radius: 15px;
+        font-family: roboto, sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: rgb(255, 0, 0);
+    }
+
+}
+
+@media (max-width: 375px) {
+    // .user-data-main-container {
+    //     width: 100%;
+    //     height: 100%;
+    //     border: solid 1px rgb(213, 206, 255);
+
+    // }
+
+    .user-data {
+        background-color: white;
+        width: 100%;
+        height: 90%;
+        margin: 0;
+        padding: 5px;
+        z-index: 10;
+
+        .header {
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 3px;
+        }
+
+        .user-profile-details {
+            h2 {
+                margin-left: 10px;
+            }
+        }
+        
+
+    }
+}
